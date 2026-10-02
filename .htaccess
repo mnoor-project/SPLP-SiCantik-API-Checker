@@ -1,0 +1,10 @@
+# Apache. Untuk Nginx lihat nginx.example.conf (.htaccess tidak berlaku di Nginx).
+Options -Indexes
+
+# Berkas sensitif tidak boleh diakses langsung
+<FilesMatch "(^\.|\.(sqlite|sqlite-wal|sqlite-shm|db|log|bak)$|^config\.php$|^set-password\.php$)">
+    Require all denied
+</FilesMatch>
+
+# Folder internal
+RedirectMatch 404 ^/(data|src|views)(/|$)
