@@ -101,6 +101,9 @@ set-password.php        ganti sandi (CLI)
 nginx.example.conf      contoh Nginx
 ```
 
+<!-- Bagian donasi disembunyikan dari tampilan GitHub tetapi tetap ada di berkas ini dan di aplikasi.
+     Hapus baris pembuka dan penutup komentar ini untuk menampilkannya lagi. -->
+<!--
 ## Dukung Pengembangan ❤️
 
 Alat ini gratis dan dikembangkan mandiri. Jika bermanfaat, dukungan sukarela Anda membantu waktu dan tenaga untuk perbaikan, fitur baru, dan dokumentasi.
@@ -112,6 +115,7 @@ Alat ini gratis dan dikembangkan mandiri. Jika bermanfaat, dukungan sukarela And
 | 🌐 Website | [muhammadnoor.com](https://muhammadnoor.com) |
 
 Donasi bersifat sukarela dan tidak wajib. Seluruh fitur tetap dapat digunakan tanpa donasi. Dukungan bersifat pribadi kepada pengembang dan tidak berkaitan dengan layanan, pungutan, atau kewenangan instansi mana pun.
+-->
 
 Proyek terkait: [Sicantik Cloud Dashboard](https://github.com/mnoor-project/sicantik-cloud-dashboard).
 
