@@ -143,7 +143,7 @@ $ver = h(APP_VERSION . '-' . (int)@filemtime(__DIR__ . '/../assets/app.js'));
   <div class="tp" id="panel-panduan">
     <div class="card">
       <h3>&#x1F4D6; Cara Pakai</h3>
-      <p class="muted" style="margin:6px 0 16px">Alat ini menguji API interop SiCantik SPLP dan mendekripsi respons AES-256-GCM-nya.</p>
+      <p class="muted" style="margin:6px 0 16px">Alat ini menguji API interop SiCantik pada SPLP (Sistem Penghubung Layanan Pemerintah) dan mendekripsi respons AES-256-GCM-nya.</p>
       <div class="cg">
 <?php if (!$isPublic): ?>
         <div class="ci"><span class="ci-i">1&#xFE0F;&#x20E3;</span><span class="ci-l">Pilih Preset</span><span class="ci-d">Pilih preset dari dropdown, atau isi form manual.</span></div>

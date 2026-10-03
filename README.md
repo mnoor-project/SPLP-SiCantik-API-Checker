@@ -1,6 +1,6 @@
 # SPLP SiCantik API Checker
 
-Alat web untuk **menguji endpoint API interop SiCantik (SPLP)**: memanggil endpoint, memeriksa kesehatan koneksinya, mendekripsi respons AES-256-GCM, lalu menampilkan datanya.
+Alat web untuk **menguji endpoint API interop SiCantik** pada **SPLP (Sistem Penghubung Layanan Pemerintah)**: memanggil endpoint, memeriksa kesehatan koneksinya, mendekripsi respons AES-256-GCM, lalu menampilkan datanya.
 
 > Aplikasi pendamping yang dikembangkan secara mandiri. **Bukan produk resmi** SiCantik Cloud maupun SPLP.
 
