@@ -57,14 +57,26 @@
   const openTab = (name) => document.querySelector('.tab[data-tab="' + name + '"]').click();
 
   // ---------- Query parameters ----------
-  function qpRow(k, v) {
+  function qpRow(k, v, ph) {
     const d = document.createElement('div');
     d.className = 'qr';
-    d.innerHTML = '<input type="text" placeholder="Key" class="qk" value="' + esc(k) + '">' +
-      '<input type="text" placeholder="Value" class="qv" value="' + esc(v) + '">' +
-      '<button class="bi" type="button" data-rm>✕</button>';
+    d.innerHTML = '<input type="text" placeholder="contoh: instansi_id" class="qk" autocomplete="off" spellcheck="false" value="' + esc(k) + '">' +
+      '<input type="text" placeholder="' + esc(ph || 'contoh: 123') + '" class="qv" autocomplete="off" spellcheck="false" value="' + esc(v) + '">' +
+      '<button class="bi" type="button" data-rm title="Hapus baris">✕</button>';
     return d;
   }
+  // Tombol "Tambah cepat": isi baris kosong yang ada, atau tambah baris baru; jangan duplikat nama.
+  document.querySelectorAll('.chip').forEach((b) => b.addEventListener('click', () => {
+    const key = b.dataset.qk, ph = b.dataset.qph;
+    const rows = Array.from(document.querySelectorAll('#qpc .qr'));
+    const same = rows.find((r) => r.querySelector('.qk').value.trim() === key);
+    if (same) { same.querySelector('.qv').focus(); return; }
+    let row = rows.find((r) => !r.querySelector('.qk').value.trim() && !r.querySelector('.qv').value.trim());
+    if (!row) { row = qpRow('', '', ph); $('qpc').appendChild(row); }
+    row.querySelector('.qk').value = key;
+    row.querySelector('.qv').placeholder = ph;
+    row.querySelector('.qv').focus();
+  }));
   function getQP() {
     const o = {};
     document.querySelectorAll('#qpc .qr').forEach((r) => {

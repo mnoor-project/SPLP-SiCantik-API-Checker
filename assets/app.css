@@ -97,3 +97,17 @@ tr:hover td{background:rgba(59,130,246,.05)}
 .lb form{display:block}
 code{background:var(--bg);padding:1px 5px;border-radius:4px;font-size:.8em}.errbox{padding:10px;background:rgba(239,68,68,.1);border-radius:6px;color:var(--rd);margin-bottom:12px;word-break:break-word}
 .sub{margin:12px 0 8px;font-size:.85rem;color:var(--tx2)}
+
+/* ---- Query Parameters: samakan dengan kolom lain, dua kolom berlebar sama ---- */
+.qr,.qhead{display:grid;grid-template-columns:1fr 1fr 36px;gap:8px;align-items:center}
+.qr{margin-bottom:8px}
+.qhead{font-size:.75rem;color:var(--tx2);font-weight:500;margin-bottom:6px}
+.qr input{width:100%;min-width:0;padding:10px 12px;background:var(--bg);border:1px solid var(--bd);border-radius:6px;color:var(--tx);font-size:.85rem;font-family:inherit}
+.qr input:focus{outline:none;border-color:var(--pr)}
+input::placeholder,textarea::placeholder{color:var(--tx2);opacity:.65}
+.howto{font-size:.85rem;color:var(--tx2);line-height:1.5;margin-bottom:12px}
+.chips{display:flex;gap:6px;flex-wrap:wrap;align-items:center;margin-bottom:14px}
+.chip{background:var(--bg);border:1px solid var(--bd);color:var(--tx2);border-radius:14px;padding:4px 12px;font-size:.78rem;cursor:pointer;font-family:inherit}
+.chip:hover{border-color:var(--pr);color:var(--pr)}
+.chip::before{content:"+ "}.ht{font-size:.75rem;color:var(--tx2);line-height:1.5}
+.ht code{font-size:.95em}

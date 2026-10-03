@@ -88,8 +88,20 @@ $ver = h(APP_VERSION . '-' . (int)@filemtime(__DIR__ . '/../assets/app.js'));
       </details>
     </div>
     <div class="card"><h3>&#x1F4DD; Query Parameters</h3>
-      <div id="qpc"><div class="qr"><input type="text" placeholder="Key" class="qk"><input type="text" placeholder="Value" class="qv"><button class="bi" type="button" data-rm>&#x2715;</button></div></div>
+      <p class="howto">Parameter tambahan yang dikirim ke endpoint sebagai <code>?nama=nilai</code>.
+        Isi <b>nama parameter</b> di kolom kiri dan <b>nilainya</b> di kolom kanan. Baris yang namanya kosong diabaikan.
+        Parameter yang dibutuhkan berbeda tiap endpoint, lihat dokumentasi endpoint di API Manager.</p>
+      <div class="chips"><span class="muted">Tambah cepat:</span>
+        <button type="button" class="chip" data-qk="instansi_id" data-qph="ID instansi Anda, mis. 123">instansi_id</button>
+        <button type="button" class="chip" data-qk="tgl_awal" data-qph="YYYY-MM-DD, mis. 2026-01-01">tgl_awal</button>
+        <button type="button" class="chip" data-qk="tgl_akhir" data-qph="YYYY-MM-DD, mis. 2026-12-31">tgl_akhir</button>
+        <button type="button" class="chip" data-qk="no_permohonan" data-qph="nomor permohonan yang ingin dilacak">no_permohonan</button>
+      </div>
+      <div class="qhead"><span>Nama parameter</span><span>Nilai</span><span></span></div>
+      <div id="qpc"><div class="qr"><input type="text" placeholder="contoh: instansi_id" class="qk" autocomplete="off" spellcheck="false"><input type="text" placeholder="contoh: 123" class="qv" autocomplete="off" spellcheck="false"><button class="bi" type="button" data-rm title="Hapus baris">&#x2715;</button></div></div>
       <button class="bi add" type="button" id="btn-addqp" title="Tambah parameter">&#xFF0B;</button>
+      <p class="ht" style="margin-top:12px">Contoh: <code>instansi_id</code> = <code>123</code>, <code>tgl_awal</code> = <code>2026-01-01</code>, <code>tgl_akhir</code> = <code>2026-12-31</code>
+        &rarr; dikirim sebagai <code>?instansi_id=123&amp;tgl_awal=2026-01-01&amp;tgl_akhir=2026-12-31</code></p>
     </div>
     <div class="fa">
       <button class="btn btn-pr" id="btn-test" type="button" style="width:auto">&#x25B6; Test API</button>
