@@ -37,8 +37,8 @@ Satu kode, dua cara pakai. Atur di `config.php`:
 
 | Field | Keterangan |
 |---|---|
-| API Key Path (UUID) | UUID endpoint di URL |
-| Bearer Token | Dikirim di header `auth` |
+| API Key Path (UUID) - Template Data | UUID endpoint di URL |
+| Bearer Token - Token Key | Dikirim di header `auth` |
 | **API Key** | Dikirim di header `apikey`. Diterbitkan oleh **Komdigi** lewat API Manager SPLP, **bukan** dari dashboard SiCantik, dan berbeda untuk tiap instansi |
 | Salt Key | Untuk dekripsi AES-256-GCM |
 | Query Parameters | Misalnya `instansi_id`, `tgl_awal`, `tgl_akhir`, `no_permohonan` |

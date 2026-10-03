@@ -66,10 +66,10 @@ $ver = h(APP_VERSION . '-' . (int)@filemtime(__DIR__ . '/../assets/app.js'));
     <div class="card"><h3>&#x2699;&#xFE0F; Konfigurasi Endpoint</h3>
       <div class="fg"><label for="f-name">Nama Endpoint <span class="opt">(opsional)</span></label>
         <input type="text" id="f-name" maxlength="200" placeholder="Misal: Daftar Proses Perizinan"></div>
-      <div class="fg"><label for="f-uuid">API Key Path (UUID)</label>
+      <div class="fg"><label for="f-uuid">API Key Path (UUID) <span class="opt">- Template Data</span></label>
         <input type="text" id="f-uuid" autocomplete="off" spellcheck="false" placeholder="xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx">
         <div class="ht">UUID di URL: <?= h(rtrim((string)cfg('base_api_url'), '/')) ?>/<b>{UUID}</b></div></div>
-      <div class="fg"><label for="f-bearer">Bearer Token <span class="opt">(header: auth)</span></label>
+      <div class="fg"><label for="f-bearer">Bearer Token <span class="opt">(header: auth) - Token Key</span></label>
         <textarea id="f-bearer" rows="2" autocomplete="off" spellcheck="false" placeholder="eyJhbGciOiJIUzI1NiIs... (bisa berbeda tiap endpoint)"></textarea></div>
       <div class="fg"><label for="f-apikey">API Key <span class="opt">(header: apikey)</span></label>
         <textarea id="f-apikey" rows="2" autocomplete="off" spellcheck="false" placeholder="API key dari API Manager instansi Anda"></textarea>
@@ -159,8 +159,8 @@ $ver = h(APP_VERSION . '-' . (int)@filemtime(__DIR__ . '/../assets/app.js'));
         <thead><tr><th>Field</th><th>Keterangan</th></tr></thead>
         <tbody>
           <tr><td>Nama Endpoint</td><td>Bebas, hanya untuk identitas pada riwayat. Opsional.</td></tr>
-          <tr><td>API Key Path (UUID)</td><td>UUID endpoint di URL. Wajib.</td></tr>
-          <tr><td>Bearer Token (auth)</td><td>Token untuk header <code>auth</code>. Bisa berbeda tiap endpoint. Wajib.</td></tr>
+          <tr><td>API Key Path (UUID) - Template Data</td><td>UUID endpoint di URL. Wajib.</td></tr>
+          <tr><td>Bearer Token (auth) - Token Key</td><td>Token untuk header <code>auth</code>. Bisa berbeda tiap endpoint. Wajib.</td></tr>
           <tr><td>API Key (apikey)</td><td>Nilai header <code>apikey</code>. Diterbitkan oleh <b>Komdigi</b> lewat API Manager SPLP (bukan dari dashboard SiCantik) dan berbeda untuk tiap instansi. Wajib.</td></tr>
           <tr><td>Salt Key</td><td>Untuk dekripsi AES-256-GCM pada respons. Wajib.</td></tr>
           <tr><td>Query Parameters</td><td>Pasangan key-value yang menjadi query string, misalnya <code>instansi_id=...</code> atau <code>no_permohonan=...</code>.</td></tr>
